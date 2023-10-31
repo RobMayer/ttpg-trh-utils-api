@@ -2,9 +2,6 @@
     "name": "@robmayer/mylib",
     "license": "UNLICENSE",
     "version": "0.0.1-alpha",
-    "publishConfig": {
-        "registry": "https://npm.pkg.github.com/@RobMayer"
-    },
     "scripts": {
         "build": "tsup src/*.ts --format cjs,esm --dts --no-splitting",
         "clean": "rm -rf ./dist",
