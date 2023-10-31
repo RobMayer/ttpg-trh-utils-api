@@ -1,4 +1,4 @@
-import { GameObject, GameWorld, world } from "@tabletop-playground/api";
+import { GameObject, GameWorld, JSConsole, world } from "@tabletop-playground/api";
 
 export namespace Jukebox {
     export type Events = {
@@ -35,7 +35,7 @@ export namespace Jukebox {
     };
 
     export const controls = (obj: GameObject): undefined | Controls => {
-        return (world as any)?.TRH_PICKUPS?.jukebox?.[obj.getId()];
+        return (world as any)?.TRH_PICKUP?.jukebox?.[obj.getId()];
     };
 }
 
