@@ -1,14 +1,14 @@
 {
     "name": "@robmayer/mylib",
     "license": "UNLICENSE",
-    "version": "0.0.1",
-      "publishConfig": {
-        "registry":"https://npm.pkg.github.com/@RobMayer"
-      },
+    "version": "0.0.1-alpha",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/@RobMayer"
+    },
     "scripts": {
-      "build": "tsup src/*.ts --format cjs,esm --dts --no-splitting",
-      "clean": "rm -rf ./dist",
-      "lint": "tsc"
+        "build": "tsup src/*.ts --format cjs,esm --dts --no-splitting",
+        "clean": "rm -rf ./dist",
+        "lint": "tsc"
     },
     "main": "dist/index.js",
     "module": "dist/index.mjs",
@@ -16,5 +16,9 @@
     "devDependencies": {
         "tsup": "^7.1.0",
         "typescript": "^5.1.6"
+    },
+    "dependencies": {
+        "@tabletop-playground/api": "^0.38.0",
+        "ttpg-common-lib": "^0.0.3"
     }
 }
