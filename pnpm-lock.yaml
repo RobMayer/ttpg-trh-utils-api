@@ -9,15 +9,15 @@ dependencies:
     specifier: ^0.38.0
     version: 0.38.0
   ttpg-common-lib:
-    specifier: ^0.0.3
-    version: 0.0.3
+    specifier: ^0.0.4
+    version: 0.0.4
 
 devDependencies:
   tsup:
-    specifier: ^7.1.0
+    specifier: ^7.2.0
     version: 7.2.0(typescript@5.2.2)
   typescript:
-    specifier: ^5.1.6
+    specifier: ^5.2.2
     version: 5.2.2
 
 packages:
@@ -844,8 +844,8 @@ packages:
       - ts-node
     dev: true
 
-  /ttpg-common-lib@0.0.3:
-    resolution: {integrity: sha512-Vj7DEA80Kxwg+NOXdAuf1ETKDg4QwP0qog509s46Ffs+6zaVsoHXhXBNfzNdt6CJZD9CyDYjAOsxxz8Bp2zc3Q==}
+  /ttpg-common-lib@0.0.4:
+    resolution: {integrity: sha512-ZUfUN9ouXPML/m1IuADWRmSKnJ9Re98+WJ7UX8/J0v98bdLafahrlSb+F/Atd2xgHi+me077vvfRliQjl0UnuA==}
     dependencies:
       '@tabletop-playground/api': 0.38.0
     dev: false

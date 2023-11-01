@@ -1,4 +1,5 @@
 import { GameObject, GameWorld, JSConsole, world } from "@tabletop-playground/api";
+import { CrossRef } from "ttpg-common-lib";
 
 export namespace Jukebox {
     export type Events = {
@@ -28,14 +29,16 @@ export namespace Jukebox {
         setShuffle: (value: boolean) => void;
         dequeue: (...idx: number[]) => void;
         enqueue: (...items: MediaEntry[]) => number;
-        reset: () => void;
         clearPlaylist: () => void;
         loadPlaylist: (nane: string) => boolean;
         volume: (n: number) => void;
     };
 
     export const controls = (obj: GameObject): undefined | Controls => {
-        return (world as any)?.TRH_PICKUP?.jukebox?.[obj.getId()];
+        if (obj.isValid()) {
+            return CrossRef.get<Controls>("@ThatRobHuman/utilties/jukebox", obj.getId());
+        }
+        return;
     };
 }
 
