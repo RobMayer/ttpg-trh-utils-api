@@ -3,10 +3,11 @@ import { CrossRef } from "ttpg-common-lib";
 
 export namespace Jukebox {
     export type Events = {
-        started: [GameObject, string, number];
-        paused: [GameObject, string, number, number];
-        endOfSong: [GameObject, string];
-        endOfPlay: [GameObject, string];
+        started: [jukebox: GameObject, song: MediaEntry];
+        paused: [jukebox: GameObject, song: MediaEntry, elapsed: number, remaining: number];
+        stopped: [jukebox: GameObject];
+        endOfSong: [jukebox: GameObject, song: MediaEntry, next: MediaEntry | null];
+        endOfPlay: [jukebox: GameObject, song: MediaEntry];
     };
 
     export type MediaEntry =
@@ -44,21 +45,21 @@ export namespace Jukebox {
 
 export namespace Controller {
     export type Events = {
-        analog: [GameObject, string, number, number];
-        touch: [GameObject, string, number];
-        toggle: [GameObject, string, number, boolean];
-        initialize: [GameObject, string, number[], boolean[]];
+        analog: [controller: GameObject, channel: number, value: number];
+        touch: [controller: GameObject, channel: number];
+        toggle: [controller: GameObject, channel: number, state: boolean];
+        initialize: [controller: GameObject, analogs: number[], toggles: boolean[]];
     };
 }
 
 export namespace Timer {
     export type Events = {
-        elapsed: [GameObject];
+        elapsed: [timer: GameObject];
     };
 }
 
 export namespace Hourglass {
     export type Events = {
-        elapsed: [GameObject];
+        elapsed: [timer: GameObject];
     };
 }
