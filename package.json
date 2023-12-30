@@ -1,7 +1,7 @@
 {
     "name": "ttpg-trh-utils-api",
     "license": "UNLICENSE",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "scripts": {
         "build": "tsup src/*.ts --format cjs,esm --dts --no-splitting",
         "clean": "rm -rf ./dist",
@@ -14,11 +14,11 @@
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
     "devDependencies": {
-        "tsup": "^7.2.0",
-        "typescript": "^5.2.2"
+        "tsup": "^8.0.1",
+        "typescript": "^5.3.3"
     },
     "dependencies": {
-        "@tabletop-playground/api": "^0.38.0",
-        "ttpg-common-lib": "^0.0.7"
+        "@tabletop-playground/api": "^0.39.0",
+        "ttpg-common-lib": "^0.0.9"
     }
 }
